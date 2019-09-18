@@ -99,7 +99,7 @@ class Sitemap(View):
 
         if exists(path) and not self.modified and not conf.modified:
             event.skip('sitemap', path)
-            raise StopIteration
+            return
 
         for ns, fname in self.files:
 

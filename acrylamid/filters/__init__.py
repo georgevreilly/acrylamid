@@ -364,6 +364,6 @@ class FilterTree(list):
                 path.pop(0)
 
             if not ls:
-                raise StopIteration
+                break
 
             yield ls

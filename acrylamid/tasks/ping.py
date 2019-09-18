@@ -22,7 +22,7 @@ from acrylamid.colors import blue, green, bold
 from acrylamid import readers, commands, helpers, log
 from acrylamid.tasks.info import option
 from acrylamid.lib.requests import head, URLError, HTTPError
-from acrylamid.lib.async import Threadpool
+from acrylamid.lib._async import Threadpool
 
 if PY2K:
     from urlparse import urlparse

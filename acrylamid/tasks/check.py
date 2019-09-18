@@ -18,7 +18,7 @@ from acrylamid import readers, helpers, compat
 from acrylamid.tasks import task, argument
 from acrylamid.colors import green, yellow, red, blue, white
 
-from acrylamid.lib.async import Threadpool
+from acrylamid.lib._async import Threadpool
 from acrylamid.lib.requests import get, head, HTTPError, URLError
 
 if compat.PY2K:
