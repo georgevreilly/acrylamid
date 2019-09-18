@@ -69,7 +69,7 @@ other filters
 
 blogging features
 
-- you like the [YAML front matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter) from [Jekyll](http://jekyllrb.com/) or [nanoc](http://nanoc.stoneship.org/)? First choice in Acrylamid!
+- you like the [YAML front matter](https://jekyllrb.com/docs/front-matter/) from [Jekyll](http://jekyllrb.com/) or [nanoc](http://nanoc.stoneship.org/)? First choice in Acrylamid!
 - coming from Pelican_? Acrylamid has also support for metadata in the native
   format of Markdown, reStructuredText and even Pandoc.
 - support for translations (oh, and did I mention the language dependend
@@ -82,17 +82,17 @@ blogging features
 
 Quickstart
 
-    easy_install -U acrylamid
+    pip install acrylamid
 
 This installs Acrylamid with Jinja2_ as templating engine. For Mako use:
-    
-    easy_install -U acrylamid[mako]
-    
+
+    pip install acrylamid[mako]
+
 This installs two additional but not required dependencies: `Markdown` and `translitcodec`. To get a list of all supported modules, head over to [additional supported modules](http://posativ.org/acrylamid/installation.html#additional-supported-modules).
 
 If you rather use non-ascii characters, you're better off with:
 
-    easy_install -U acrylamid python-magic unidecode
+    pip install acrylamid python-magic unidecode
 
 Initialize the base structure, edit *conf.py* and *layouts/* and compile with:
 
