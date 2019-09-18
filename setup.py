@@ -2,7 +2,7 @@
 
 import sys
 
-import pathlib
+import os.path
 from setuptools import setup, find_packages
 
 requires = ['Jinja2>=2.4', 'Markdown>=2.0.1', 'unidecode>=0.04.13']
@@ -14,10 +14,11 @@ if sys.platform == 'win32':
     requires.append('colorama')
 
 # The directory containing this file
-HERE = pathlib.Path(__file__).parent
+HERE = os.path.dirname(__file__)
 
 # The text of the README file
-README = (HERE / 'README.md').read_text(encoding="utf-8")
+with open(os.path.join(HERE, 'README.md'), 'rb') as f:
+    README = f.read().decode(encoding="utf-8")
 
 setup(
     name='acrylamid',
@@ -41,10 +42,9 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.7",
     ],
     install_requires=requires,
     extras_require={
